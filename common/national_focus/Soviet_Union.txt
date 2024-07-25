@@ -1,0 +1,84 @@
+focus_tree = {
+	id = Soviet_Union
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	default = no
+	focus = {
+		id = SOV_Maxim_question
+		icon = GFX_focus_SOV_purge_trotskyists
+		cost = 10
+		x = 9
+		y = 1
+
+	}
+	focus = {
+		id = SOV_Maxim_kill
+		icon = GFX_focus_SOV_behead_the_snake
+		cost = 10
+		prerequisite = {
+			focus = SOV_Maxim_question
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = SOV_Un_Maxim
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		cost = 10
+		prerequisite = {
+			focus = SOV_Maxim_question
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = SOV_Out_Maxim
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 10
+		prerequisite = {
+			focus = SOV_Maxim_question
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = SOV_Mops_Union
+		icon = GFX_focus_SOV_ally_bukharinists
+		cost = 10
+		prerequisite = {
+			focus = SOV_Un_Maxim
+			focus = SOV_Maxim_kill
+			focus = SOV_Out_Maxim
+		}
+		mutually_exclusive = {
+			focus = SOV_Noreal_Union
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = SOV_Noreal_Union
+		icon = GFX_focus_SOV_ally_zinovyevists
+		cost = 10
+		prerequisite = {
+			focus = SOV_Maxim_kill
+			focus = SOV_Un_Maxim
+			focus = SOV_Out_Maxim
+		}
+		mutually_exclusive = {
+			focus = SOV_Mops_Union
+		}
+		x = 10
+		y = 3
+
+	}
+}
